@@ -154,7 +154,7 @@ khanin-ch/
 ### Backend (.env)
 ```
 OPENAI_API_KEY=sk-...
-FRONTEND_URL=https://your-domain.com
+FRONTEND_URL=https://khanin.ch
 PORT=3000
 NODE_ENV=production
 ```
