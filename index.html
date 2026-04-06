@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Khanin Chomphusri - Software Development Engineer specializing in Flutter, AI-first development, and scalable mobile architecture. Serving 10M+ users."/>
+    <meta name="keywords" content="Software Engineer, Flutter Developer, Mobile Architecture, AI-First Development, Bangkok, Thailand"/>
+    <meta name="author" content="Khanin Chomphusri"/>
+    <title>Khanin Chomphusri - Software Development Engineer</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-high": "#262a30",
+                        "surface-dim": "#101419",
+                        "on-surface": "#e0e2ea",
+                        "secondary-container": "#394857",
+                        "on-secondary-container": "#a7b7c8",
+                        "background": "#101419",
+                        "surface-variant": "#31353b",
+                        "surface-container-lowest": "#0b0e14",
+                        "secondary": "#b8c8da",
+                        "surface-container-highest": "#31353b",
+                        "primary-fixed-dim": "#00dbe9",
+                        "surface-container": "#1c2025",
+                        "on-background": "#e0e2ea",
+                        "primary": "#dbfcff",
+                        "outline-variant": "#3b494b",
+                        "surface-bright": "#36393f",
+                        "surface": "#101419",
+                        "surface-container-low": "#181c21",
+                        "on-surface-variant": "#b9cacb",
+                        "outline": "#849495"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b0e14;
+            color: #e0e2ea;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+
+<body class="bg-surface-container-lowest">
+    <div class="noise-overlay"></div>
+    
+    <!-- Top Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-50 rounded-none bg-slate-900/60 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+        <div class="text-2xl font-bold tracking-tighter text-[#dbfcff]">KHANIN.CH</div>
+        <div class="hidden md:flex gap-12 items-center">
+            <a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-[#dbfcff] font-bold border-b-2 border-[#dbfcff] pb-1" href="#about">ABOUT</a>
+            <a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-slate-400 hover:text-[#dbfcff] transition-colors" href="#experience">EXPERIENCE</a>
+            <a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-slate-400 hover:text-[#dbfcff] transition-colors" href="#projects">PROJECTS</a>
+            <a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-slate-400 hover:text-[#dbfcff] transition-colors" href="#contact">CONTACT</a>
+        </div>
+    </nav>
+
+    <main class="relative">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center px-12 lg:px-24 pt-32 overflow-hidden">
+            <div class="grid grid-cols-12 w-full items-end gap-0 relative">
+                <div class="col-span-12 lg:col-span-8 z-10">
+                    <h1 class="font-headline font-black text-[12vw] leading-[0.8] tracking-tighter text-primary mix-blend-difference select-none">
+                        KHANIN<br/>
+                        <span class="text-on-surface">CHOMPHUSRI</span>
+                    </h1>
+                    <div class="mt-12 max-w-lg">
+                        <p class="text-secondary font-body text-xl leading-relaxed opacity-70">
+                            Software Development Engineer with an AI-first mindset. Building scalable mobile architecture and design systems serving 10M+ users.
+                        </p>
+                        <div class="mt-8 flex gap-4 items-center">
+                            <span class="material-symbols-outlined text-primary">location_on</span>
+                            <span class="font-label text-sm tracking-widest text-secondary">BANGKOK, THAILAND</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute right-0 top-0 lg:relative lg:col-span-4 h-[716px] lg:h-[870px] w-full mt-[-10%] lg:mt-0 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
+                    <img alt="Khanin Chomphusri" class="w-full h-full object-cover" src="https://via.placeholder.com/600x900/1c2025/dbfcff?text=KHANIN+CHOMPHUSRI"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+                </div>
+                <div class="hidden lg:block absolute left-[-4rem] top-1/2 -translate-y-1/2 vertical-text">
+                    <span class="font-label text-[0.6875rem] tracking-[0.5em] text-outline uppercase opacity-40">SOFTWARE ENGINEER — 2024</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills -->
+        <section id="about" class="py-48 px-12 lg:px-24 bg-surface">
+            <div class="grid grid-cols-12 gap-8">
+                <div class="col-span-12 lg:col-span-4 mb-24 lg:mb-0">
+                    <h2 class="font-headline text-[3.5rem] leading-none uppercase font-black text-on-surface-variant">EXPERTISE</h2>
+                    <p class="mt-6 font-body text-secondary max-w-xs">Technical capabilities built on engineering excellence and AI-first development principles.</p>
+                </div>
+                <div class="col-span-12 lg:col-span-8 flex flex-col gap-16">
+                    <div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+                        <span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">01</span>
+                        <div>
+                            <h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Mobile Architecture</h3>
+                            <p class="text-secondary opacity-60 max-w-2xl font-body mb-4">
+                                Flutter/Dart expert specializing in design system development and UI module architecture. Built enterprise packages serving 10M+ users with 90%+ test coverage.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">FLUTTER</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">DART</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">BLOC/CUBIT</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">WIDGETBOOK</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+                        <span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">02</span>
+                        <div>
+                            <h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Full-Stack Development</h3>
+                            <p class="text-secondary opacity-60 max-w-2xl font-body mb-4">
+                                Modern web applications with Angular and TypeScript. Experience in enterprise banking systems and real-time audio streaming applications.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">ANGULAR</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">TYPESCRIPT</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">JAVASCRIPT</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">TAILWIND</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+                        <span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">03</span>
+                        <div>
+                            <h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Cloud & AI Integration</h3>
+                            <p class="text-secondary opacity-60 max-w-2xl font-body mb-4">
+                                Serverless architecture with Firebase and Cloud Functions. AI-assisted development workflows and prompt engineering for rapid prototyping.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">FIREBASE</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">CLOUD FUNCTIONS</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">AI TOOLING</span>
+                                <span class="text-xs font-label tracking-wider px-3 py-1 bg-surface-container-high text-primary">FIRESTORE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-48 bg-surface-container-low px-12 lg:px-24">
+            <div class="flex flex-col mb-32">
+                <h2 class="font-headline text-[5rem] lg:text-[8rem] leading-[0.8] uppercase font-black text-primary opacity-10">PROJECTS</h2>
+                <div class="flex justify-end -mt-8 lg:-mt-16">
+                    <p class="font-label tracking-widest uppercase text-on-surface-variant max-w-xs text-right">Selected work showcasing technical capabilities and problem-solving.</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-24">
+                <!-- Project 1: myAIS Design System -->
+                <div class="lg:col-span-8 group relative bg-surface-container-lowest overflow-hidden aspect-video lg:aspect-auto lg:h-[600px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+                    <div class="absolute bottom-12 left-12 right-12">
+                        <span class="font-label text-xs tracking-widest text-primary mb-2 block">ENTERPRISE MOBILE</span>
+                        <h4 class="font-headline text-4xl uppercase font-bold text-white mb-4">myAIS Design System</h4>
+                        <p class="text-secondary text-sm max-w-xl mb-4">
+                            Enterprise design system packages serving 10M+ users. Achieved 40% performance improvement and maintained 90%+ test coverage.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Flutter</span>
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Widgetbook</span>
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">10M+ Users</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2: audioarenalab.com -->
+                <div class="lg:col-span-4 group relative bg-surface-container-high overflow-hidden lg:mt-32 h-[500px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                    <div class="absolute top-12 left-12 right-12">
+                        <span class="font-label text-xs tracking-widest text-primary mb-2 block">WEB APPLICATION</span>
+                        <h4 class="font-headline text-3xl uppercase font-bold text-white mb-4">Audio Arena Lab</h4>
+                        <p class="text-secondary text-sm mb-4">
+                            Real-time audio comparison platform with Angular and TypeScript. Supports 19 hardware profiles across 12 audio tracks.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Angular</span>
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Real-time</span>
+                        </div>
+                        <a href="https://audioarenalab.com" target="_blank" class="inline-block mt-4 text-primary text-sm font-label tracking-wider hover:underline">
+                            VIEW PROJECT →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 3: realmsup.com -->
+                <div class="lg:col-span-5 group relative bg-surface-container-highest overflow-hidden lg:-mt-24 h-[450px]">
+                    <div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"></div>
+                    <div class="absolute bottom-12 left-12 right-12">
+                        <span class="font-label text-xs tracking-widest text-primary mb-2 block">DISTRIBUTED SYSTEM</span>
+                        <h4 class="font-headline text-3xl uppercase font-bold text-white mb-4">Realms Up</h4>
+                        <p class="text-secondary text-sm mb-4">
+                            Game server monitoring with serverless architecture. Real-time status updates via Cloud Functions and Firestore.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Serverless</span>
+                            <span class="text-xs font-label px-2 py-1 bg-surface-container-high/80 text-primary">Firebase</span>
+                        </div>
+                        <a href="https://realmsup.com" target="_blank" class="inline-block mt-4 text-primary text-sm font-label tracking-wider hover:underline">
+                            VIEW PROJECT →
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 4: More Projects -->
+                <div class="lg:col-span-7 group relative bg-surface-container-low border border-outline-variant/10 overflow-hidden lg:mt-12 h-[400px] cursor-pointer hover:border-primary/30 transition-all">
+                    <div class="absolute inset-0 flex items-center justify-center p-12">
+                        <div class="text-center">
+                            <span class="material-symbols-outlined text-6xl text-primary mb-6">code</span>
+                            <p class="font-headline text-xl uppercase tracking-widest opacity-40">More Projects on GitHub</p>
+                            <p class="font-body text-sm text-secondary mt-4 opacity-60">Convert Rai App, Banking Applications, and more</p>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Timeline -->
+        <section id="experience" class="py-48 px-12 lg:px-24 bg-surface-container-lowest">
+            <div class="grid grid-cols-12">
+                <div class="col-span-12 lg:col-span-2 mb-24 lg:mb-0">
+                    <div class="sticky top-32">
+                        <h2 class="font-headline text-2xl uppercase tracking-[0.4em] text-outline">JOURNEY</h2>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-10 space-y-48">
+                    <!-- Current Role -->
+                    <div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+                        <div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-primary"></div>
+                        <span class="font-label text-sm tracking-widest text-primary-fixed mb-4 block">JULY 2023 — PRESENT</span>
+                        <h3 class="font-headline text-4xl lg:text-5xl uppercase font-bold mb-6">Software Development Engineer</h3>
+                        <p class="font-body text-primary text-lg mb-4">Oivan Digital (Thailand) — serving MimoTech AI</p>
+                        <p class="font-body text-secondary max-w-xl text-base leading-relaxed opacity-60 mb-6">
+                            Leading mobile & UI architecture for myAIS application serving 10M+ users. Delivered 3 major package versions empowering 100+ developers with comprehensive design system documentation.
+                        </p>
+                        <ul class="space-y-3 text-secondary opacity-70 max-w-2xl">
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1">▸</span>
+                                <span>Reduced widget payloads by 40% through performance optimization and refactoring</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1">▸</span>
+                                <span>Maintained 90%+ test coverage across all design system packages</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1">▸</span>
+                                <span>Leveraged AI-assisted workflows for rapid prototyping and debugging</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- R&D Manager -->
+                    <div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+                        <div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline"></div>
+                        <span class="font-label text-sm tracking-widest text-outline mb-4 block">AUGUST 2012 — JUNE 2023</span>
+                        <h3 class="font-headline text-4xl lg:text-5xl uppercase font-bold mb-6">Research & Development Manager</h3>
+                        <p class="font-body text-primary text-lg mb-4">Sathien Plastic & Fiber Group</p>
+                        <p class="font-body text-secondary max-w-xl text-base leading-relaxed opacity-60 mb-6">
+                            Directed end-to-end prototyping and new product launches for automotive parts manufacturing. Applied lean design processes to transition concepts into scalable production tooling.
+                        </p>
+                        <ul class="space-y-3 text-secondary opacity-70 max-w-2xl">
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1">▸</span>
+                                <span>Led multi-functional engineering efforts solving complex production workflows</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1">▸</span>
+                                <span>Optimized cost structures ensuring high margins for each product</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Freelance Developer -->
+                    <div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+                        <div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline"></div>
+                        <span class="font-label text-sm tracking-widest text-outline mb-4 block">MARCH 2017 — FEBRUARY 2018</span>
+                        <h3 class="font-headline text-4xl lg:text-5xl uppercase font-bold mb-6">Angular Developer (Freelance)</h3>
+                        <p class="font-body text-primary text-lg mb-4">Tech Lead Innovation — serving Krungthai Bank</p>
+                        <p class="font-body text-secondary max-w-xl text-base leading-relaxed opacity-60 mb-6">
+                            Architected enterprise banking applications with TypeScript and Angular. Implemented secure user flows for fund redemption and subscription features.
+                        </p>
+                    </div>
+                    
+                    <!-- Toyota -->
+                    <div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+                        <div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline"></div>
+                        <span class="font-label text-sm tracking-widest text-outline mb-4 block">JULY 2010 — JULY 2012</span>
+                        <h3 class="font-headline text-4xl lg:text-5xl uppercase font-bold mb-6">Mechanical Engineer</h3>
+                        <p class="font-body text-primary text-lg mb-4">Toyota Motor Thailand</p>
+                        <p class="font-body text-secondary max-w-xl text-base leading-relaxed opacity-60">
+                            Applied lean methodologies (PDCA/Kaizen) for continuous improvement in vehicle prototype development and field testing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-48 px-12 lg:px-24 bg-surface-container-high relative overflow-hidden">
+            <div class="grid grid-cols-12 gap-12 relative z-10">
+                <div class="col-span-12 lg:col-span-6">
+                    <h2 class="font-headline text-[6vw] leading-none font-black text-primary uppercase mb-12">LET'S<br/>CONNECT</h2>
+                    <p class="font-body text-secondary text-xl max-w-sm mb-12 opacity-80">
+                        Open to opportunities in mobile architecture, AI-first development, and developer tools.
+                    </p>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex items-center gap-4 text-primary">
+                            <span class="material-symbols-outlined">alternate_email</span>
+                            <span class="font-label tracking-widest">CONTACT@KHANIN.CH</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-secondary">
+                            <span class="material-symbols-outlined">location_on</span>
+                            <span class="font-label tracking-widest uppercase">BANGKOK, THAILAND</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-secondary">
+                            <span class="material-symbols-outlined">link</span>
+                            <a href="https://github.com/khanin-devmode" target="_blank" class="font-label tracking-widest uppercase hover:text-primary transition-colors">GITHUB</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 lg:col-span-6 bg-surface-container-low p-12 lg:p-24 border border-outline-variant/10">
+                    <form class="flex flex-col gap-12">
+                        <div class="group relative">
+                            <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all" id="name" placeholder=" " type="text"/>
+                            <label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="name">Your Name</label>
+                        </div>
+                        <div class="group relative">
+                            <input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all" id="email" placeholder=" " type="email"/>
+                            <label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="email">Email Address</label>
+                        </div>
+                        <div class="group relative">
+                            <textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all resize-none" id="message" placeholder=" " rows="4"></textarea>
+                            <label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="message">Message</label>
+                        </div>
+                        <button class="bg-primary text-on-primary py-6 px-12 font-headline font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors text-center w-full lg:w-max">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+            <div class="absolute right-[-10%] bottom-[-10%] font-headline text-[30vw] font-black text-on-surface/5 pointer-events-none select-none">KC</div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0b0e14] grid grid-cols-12 gap-8 items-end w-full p-12 lg:p-24 border-t-0">
+        <div class="col-span-12 lg:col-span-8">
+            <div class="font-['Space_Grotesk'] text-[3.5rem] lg:text-[7rem] leading-none uppercase font-black text-[#dbfcff]">KHANIN.CH</div>
+            <p class="font-label text-outline tracking-[0.2em] mt-8">© 2024 KHANIN CHOMPHUSRI. ALL RIGHTS RESERVED.</p>
+        </div>
+        <div class="col-span-12 lg:col-span-4 flex flex-col lg:items-end gap-6">
+            <div class="flex gap-12">
+                <a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="https://github.com/khanin-devmode" target="_blank">GITHUB</a>
+                <a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="https://audioarenalab.com" target="_blank">AUDIO LAB</a>
+                <a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="https://realmsup.com" target="_blank">REALMS UP</a>
+            </div>
+            <div class="font-label text-[0.6875rem] text-outline-variant opacity-40 uppercase tracking-widest">Built with AI-First Development</div>
+        </div>
+    </footer>
+
+    <!-- HR Agent Chat Widget -->
+    <div class="fixed bottom-12 left-12 z-50">
+        <button id="chatButton" class="bg-surface-container-high/40 backdrop-blur-md border border-outline-variant/20 px-6 py-3 flex items-center gap-4 hover:bg-primary transition-all group">
+            <div class="w-2 h-2 rounded-full bg-primary group-hover:bg-on-primary animate-pulse"></div>
+            <span class="font-label text-[0.6875rem] font-bold tracking-widest text-on-surface group-hover:text-on-primary uppercase">HR AGENT</span>
+        </button>
+    </div>
+
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Chat button placeholder (will be connected to backend later)
+        document.getElementById('chatButton').addEventListener('click', function() {
+            alert('HR Agent chatbot will be integrated in the next phase!');
+        });
+    </script>
+</body>
+</html>
