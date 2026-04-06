@@ -17,7 +17,7 @@ This document contains comprehensive information about Khanin Chomphusri for the
 - **Phone**: 089 775 1918
 - **GitHub**: github.com/khanin-devmode
 - **Portfolio/Website**: khanin.ch
-- **LinkedIn**: (To be added)
+- **LinkedIn**: https://www.linkedin.com/in/khanin-ch/
 - **Other Projects**: 
   - audioarenalab.com
   - realmsup.com
