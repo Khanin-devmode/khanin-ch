@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .print-button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .print-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            padding: 20mm;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 10mm;
+            right: 20mm;
+            font-size: 10pt;
+            color: #999;
+        }
+
+        .page-label {
+            position: absolute;
+            top: 5mm;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2563eb;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 10pt;
+            font-weight: 600;
+        }
+
+        /* ATS-Friendly Typography */
+        h1 {
+            font-size: 24pt;
+            font-weight: bold;
+            margin-bottom: 8pt;
+            color: #1a1a1a;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 16pt;
+            margin-bottom: 8pt;
+            color: #1a1a1a;
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 4pt;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 8pt;
+            margin-bottom: 4pt;
+            color: #1a1a1a;
+        }
+
+        p, li {
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 6pt;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20pt;
+        }
+
+        .contact-info {
+            font-size: 11pt;
+            margin-top: 8pt;
+            line-height: 1.6;
+        }
+
+        .section {
+            margin-bottom: 16pt;
+            page-break-inside: avoid;
+        }
+
+        .job, .education-item {
+            margin-bottom: 12pt;
+            page-break-inside: avoid;
+        }
+
+        .job-header, .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4pt;
+        }
+
+        .job-title, .degree {
+            font-weight: bold;
+        }
+
+        .company, .school {
+            font-style: italic;
+            color: #555;
+        }
+
+        .date {
+            color: #666;
+            font-size: 10pt;
+        }
+
+        ul {
+            margin-left: 20pt;
+            margin-top: 4pt;
+        }
+
+        li {
+            margin-bottom: 4pt;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8pt;
+            margin-top: 8pt;
+        }
+
+        .skill-category {
+            margin-bottom: 8pt;
+        }
+
+        .skill-category strong {
+            display: block;
+            margin-bottom: 4pt;
+        }
+
+        /* Print Styles */
+        @page {
+            size: A4;
+            margin: 15mm;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .controls {
+                display: none;
+            }
+
+            .pages-container {
+                gap: 0;
+            }
+
+            .page {
+                box-shadow: none;
+                page-break-after: always;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            .page-label {
+                display: none;
+            }
+
+            .page-number {
+                display: block;
+            }
+
+            /* Prevent page breaks in important sections */
+            .section, .job, .education-item {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+
+        /* Screen-only helper */
+        @media screen {
+            .page-guide {
+                position: relative;
+            }
+
+            .page-guide::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: -20mm;
+                right: -20mm;
+                height: 1px;
+                background: #e5e5e5;
+                display: none; /* Enable to see page boundaries */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button class="print-button" onclick="window.print()">📄 Download as PDF</button>
+        <p style="margin-top: 8px; color: #666; font-size: 14px;">Click the button and select "Save as PDF" in the print dialog</p>
+    </div>
+
+    <div class="pages-container">
+        <!-- Page 1 -->
+        <div class="page">
+            <div class="page-label">Page 1</div>
+        <!-- Header -->
+        <div class="header">
+            <h1>Your Full Name</h1>
+            <div class="contact-info">
+                <p>Email: your.email@example.com | Phone: +1 (555) 123-4567</p>
+                <p>LinkedIn: linkedin.com/in/yourprofile | Portfolio: yourwebsite.com</p>
+                <p>Location: City, State, Country</p>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>Results-driven professional with X+ years of experience in [your field]. Proven track record of [key achievement]. Skilled in [key skills] with a passion for [your focus area]. Seeking to leverage expertise in [specific area] to drive success at [target company/role].</p>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="section">
+            <h2>Work Experience</h2>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Job Title</h3>
+                        <p class="company">Company Name, Location</p>
+                    </div>
+                    <span class="date">Month Year - Present</span>
+                </div>
+                <ul>
+                    <li>Achieved [specific result] by implementing [action], resulting in [quantifiable impact]</li>
+                    <li>Led team of [number] to deliver [project/outcome] within [timeframe]</li>
+                    <li>Improved [metric] by [percentage] through [specific action]</li>
+                    <li>Collaborated with [teams/stakeholders] to [accomplish goal]</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Previous Job Title</h3>
+                        <p class="company">Previous Company Name, Location</p>
+                    </div>
+                    <span class="date">Month Year - Month Year</span>
+                </div>
+                <ul>
+                    <li>Developed and launched [project] that generated [result]</li>
+                    <li>Managed [responsibility] for [scope/scale]</li>
+                    <li>Reduced [metric] by [percentage] through [initiative]</li>
+                    <li>Trained and mentored [number] team members in [skill/area]</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-title">Earlier Job Title</h3>
+                        <p class="company">Company Name, Location</p>
+                    </div>
+                    <span class="date">Month Year - Month Year</span>
+                </div>
+                <ul>
+                    <li>Contributed to [project/initiative] that achieved [outcome]</li>
+                    <li>Implemented [solution] to address [challenge]</li>
+                    <li>Coordinated with [teams] to deliver [result]</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <h2>Education</h2>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <h3 class="degree">Degree Name (e.g., Bachelor of Science in Computer Science)</h3>
+                        <p class="school">University Name, Location</p>
+                    </div>
+                    <span class="date">Graduation Year</span>
+                </div>
+                <p>GPA: X.XX/4.0 (if notable) | Honors: Dean's List, Cum Laude, etc.</p>
+                <p>Relevant Coursework: Course 1, Course 2, Course 3, Course 4</p>
+            </div>
+        </div>
+            <div class="page-number">1</div>
+        </div>
+
+        <!-- Page 2 -->
+        <div class="page">
+            <div class="page-label">Page 2</div>
+
+        <!-- Skills -->
+        <div class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <strong>Technical Skills:</strong>
+                    <p>Programming Languages, Frameworks, Tools, Technologies</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Soft Skills:</strong>
+                    <p>Leadership, Communication, Problem-Solving, Team Collaboration</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Tools & Platforms:</strong>
+                    <p>Software, Platforms, Systems you're proficient in</p>
+                </div>
+                <div class="skill-category">
+                    <strong>Languages:</strong>
+                    <p>English (Native), Spanish (Fluent), etc.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Certifications (Optional) -->
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li><strong>Certification Name</strong> - Issuing Organization, Year</li>
+                <li><strong>Another Certification</strong> - Issuing Organization, Year</li>
+            </ul>
+        </div>
+
+        <!-- Projects (Optional) -->
+        <div class="section">
+            <h2>Notable Projects</h2>
+            
+            <div class="job">
+                <h3>Project Name</h3>
+                <p class="company">Brief description of the project and your role</p>
+                <ul>
+                    <li>Key achievement or technology used</li>
+                    <li>Impact or result of the project</li>
+                </ul>
+            </div>
+        </div>
+            <div class="page-number">2</div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Add keyboard shortcut for printing
+        document.addEventListener('keydown', function(e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+                window.print();
+            }
+        });
+    </script>
+</body>
+</html>
