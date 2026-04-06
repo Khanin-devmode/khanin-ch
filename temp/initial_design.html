@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#262a30",
+                    "surface-dim": "#101419",
+                    "tertiary-fixed-dim": "#eac324",
+                    "on-surface": "#e0e2ea",
+                    "secondary-container": "#394857",
+                    "inverse-on-surface": "#2d3137",
+                    "on-secondary-fixed-variant": "#394857",
+                    "on-secondary-fixed": "#0d1d2a",
+                    "error-container": "#93000a",
+                    "on-secondary-container": "#a7b7c8",
+                    "on-primary-container": "#006970",
+                    "error": "#ffb4ab",
+                    "tertiary": "#fff5de",
+                    "surface-container-low": "#181c21",
+                    "background": "#101419",
+                    "inverse-primary": "#006970",
+                    "on-tertiary-fixed-variant": "#554500",
+                    "on-primary": "#00363a",
+                    "on-error": "#690005",
+                    "surface-variant": "#31353b",
+                    "on-tertiary-fixed": "#231b00",
+                    "surface-container-lowest": "#0b0e14",
+                    "inverse-surface": "#e0e2ea",
+                    "secondary": "#b8c8da",
+                    "surface-container-highest": "#31353b",
+                    "on-tertiary": "#3b2f00",
+                    "primary-fixed": "#7df4ff",
+                    "primary-fixed-dim": "#00dbe9",
+                    "surface-container": "#1c2025",
+                    "on-background": "#e0e2ea",
+                    "on-tertiary-container": "#715d00",
+                    "on-secondary": "#223240",
+                    "primary": "#dbfcff",
+                    "tertiary-container": "#fed639",
+                    "outline-variant": "#3b494b",
+                    "secondary-fixed": "#d4e4f6",
+                    "surface-bright": "#36393f",
+                    "surface": "#101419",
+                    "on-primary-fixed": "#002022",
+                    "primary-container": "#00f0ff",
+                    "surface-tint": "#00dbe9",
+                    "secondary-fixed-dim": "#b8c8da",
+                    "on-primary-fixed-variant": "#004f54",
+                    "tertiary-fixed": "#ffe179",
+                    "on-surface-variant": "#b9cacb",
+                    "outline": "#849495",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b0e14;
+            color: #e0e2ea;
+            font-family: 'Manrope', sans-serif;
+            overflow-x: hidden;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            z-index: 9999;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest">
+<div class="noise-overlay"></div>
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 left-0 w-full z-50 rounded-none bg-slate-900/60 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-[#dbfcff]">STUDIO_VOID</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-[#dbfcff] font-bold border-b-2 border-[#dbfcff] pb-1" href="#">ARCHIVE</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-slate-400 hover:text-[#dbfcff] transition-colors" href="#">PROCESS</a>
+<a class="font-['Space_Grotesk'] uppercase tracking-[0.2em] text-[0.6875rem] text-slate-400 hover:text-[#dbfcff] transition-colors" href="#">LABS</a>
+<button class="bg-primary text-on-primary px-8 py-2 text-[0.6875rem] font-bold tracking-widest uppercase hover:opacity-90 transition-all">HIRE</button>
+</div>
+</nav>
+<main class="relative">
+<!-- Hero Section: Intentional Asymmetry -->
+<section class="min-h-screen flex items-center px-12 lg:px-24 pt-32 overflow-hidden">
+<div class="grid grid-cols-12 w-full items-end gap-0 relative">
+<div class="col-span-12 lg:col-span-8 z-10">
+<h1 class="font-headline font-black text-[12vw] leading-[0.8] tracking-tighter text-primary mix-blend-difference select-none">
+                        KHANIN<br/>
+<span class="text-on-surface">CHOMPHUSRI</span>
+</h1>
+<div class="mt-12 max-w-lg">
+<p class="text-secondary font-body text-xl leading-relaxed opacity-70">
+                            Senior Software Architect focusing on the intersection of generative structures and resilient digital infrastructure. Based in the void.
+                        </p>
+</div>
+</div>
+<div class="absolute right-0 top-0 lg:relative lg:col-span-4 h-[716px] lg:h-[870px] w-full mt-[-10%] lg:mt-0 grayscale hover:grayscale-0 transition-all duration-700 overflow-hidden">
+<img alt="Khanin Chomphusri" class="w-full h-full object-cover" data-alt="Monochromatic high-contrast portrait of a male software developer in a dark turtleneck, minimalist studio setting, sharp architectural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMnEbjHsg3dErheZZV9CtUTjS8wK3SQt2jafvI1v46LdmYNuO9Wf-vQve2I0HP3-gP1g-I_8Lso6445sP3mOg_ZYO3WReQdSSt8lkC0_3KfImWhLChGrFdAXnL_KxIbND5rz2QbbVOA66NNf0fpSlxnNR_zTCoo-slNDUZPyYSvINMRhQDTM5rSuU4UOOMT2VfKaan4DKquQn5i7woi02A-08ukKA7F2VyxZLpTRTxBrEg3QXWc1uauvptJxSEkhOzO8Nkv9R-SE8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent opacity-60"></div>
+</div>
+<div class="hidden lg:block absolute left-[-4rem] top-1/2 -translate-y-1/2 vertical-text">
+<span class="font-label text-[0.6875rem] tracking-[0.5em] text-outline uppercase opacity-40">RESIDENT DEVELOPER — 2024 EDITION</span>
+</div>
+</div>
+</section>
+<!-- Expertise: List over Cards -->
+<section class="py-48 px-12 lg:px-24 bg-surface">
+<div class="grid grid-cols-12 gap-8">
+<div class="col-span-12 lg:col-span-4 mb-24 lg:mb-0">
+<h2 class="font-headline text-[3.5rem] leading-none uppercase font-black text-on-surface-variant">EXPERTISE</h2>
+<p class="mt-6 font-body text-secondary max-w-xs">A technical foundation built on precision and architectural integrity.</p>
+</div>
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-16">
+<div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+<span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">01</span>
+<div>
+<h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Core Systems</h3>
+<p class="text-secondary opacity-60 max-w-2xl font-body">Distributed architectures, microservices, and high-concurrency engine design using Go and Rust. Building systems that breathe under load.</p>
+</div>
+</div>
+<div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+<span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">02</span>
+<div>
+<h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Digital Sculpting</h3>
+<p class="text-secondary opacity-60 max-w-2xl font-body">Frontend engineering as an art form. Leveraging WebGL, GLSL, and advanced React patterns to create tactile digital experiences.</p>
+</div>
+</div>
+<div class="group flex items-start gap-12 border-b border-outline-variant/20 pb-12 transition-all hover:pl-4">
+<span class="font-headline text-4xl text-primary-fixed-dim opacity-30 group-hover:opacity-100 transition-opacity">03</span>
+<div>
+<h3 class="font-headline text-3xl uppercase tracking-wider mb-4">Cloud Oratory</h3>
+<p class="text-secondary opacity-60 max-w-2xl font-body">Kubernetes, Terraform, and AWS native integration. Orchestrating complex environments with automated precision.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Projects: Architectural Gallery -->
+<section class="py-48 bg-surface-container-low px-12 lg:px-24">
+<div class="flex flex-col mb-32">
+<h2 class="font-headline text-[5rem] lg:text-[8rem] leading-[0.8] uppercase font-black text-primary opacity-10">WORKS</h2>
+<div class="flex justify-end -mt-8 lg:-mt-16">
+<p class="font-label tracking-widest uppercase text-on-surface-variant max-w-xs text-right">Selected captures of structural code and digital environments.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-24">
+<!-- Project 1: Large -->
+<div class="lg:col-span-8 group relative bg-surface-container-lowest overflow-hidden aspect-video lg:aspect-auto lg:h-[600px]">
+<img alt="Project One" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-100" data-alt="Abstract 3D architectural render with glowing blue lines on a dark background, representing digital network infrastructure" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDSd6u6puaiOEuZbwtjivd6assi0tu9Vgl6yWQoqPgXzpjsg4DZ76DXr1Q4KGECRsyz-9dxDxZzaJoX5Elu3_i_D0bNFu4ZdPCiECKlQ0ggTN_mARvar1bpmg4OCaBk91zeZZ8EEglUOqDgpW4TM4WDm2VXReg5lQE1AR0fGSEsN41zcr36VtRIYUbKWVMC0LqKKpMprzypXK4tsEWFgMbY-kjKjtxqlpo3EIxjS_SbmHSBeMx3LvOrTuhUiXJkGzSSe9iiYuJROs"/>
+<div class="absolute bottom-12 left-12">
+<span class="font-label text-xs tracking-widest text-primary mb-2 block">SYSTEMS ARCHITECTURE</span>
+<h4 class="font-headline text-4xl uppercase font-bold text-white">VOID_PROTOCOL</h4>
+</div>
+</div>
+<!-- Project 2: Tall -->
+<div class="lg:col-span-4 group relative bg-surface-container-high overflow-hidden lg:mt-32">
+<img alt="Project Two" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40 group-hover:opacity-80" data-alt="Minimalist abstract digital art with sharp geometric shapes and subtle cyan glow against deep black background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHkag2joRlioQN4OZwD7P0kW42b3Ufmt1kbL3KzglE_xjYc8lu_mdaaDX0-4ox4t6efhpJSXUvCWxtFbJxsNLMjHxyOw1FUkKzaP8ZR9NJdrPXnc8gDGNyGrnFcT7piGFsB6qfarX7TY-ls2RPCWW7iAjFtAhrmJZvZBp07mvlQDePcA9epNH-VQBhcn6jkUshMG2pVmt0mnddVMMSh2G5Q80MpXH5jgbmKHsjnd905CGTBhtGIoUoKCDuef_xi4Z5Kyau-fTBL_A"/>
+<div class="absolute top-12 left-12">
+<span class="font-label text-xs tracking-widest text-primary mb-2 block">CREATIVE LABS</span>
+<h4 class="font-headline text-4xl uppercase font-bold text-white">LUMINARY_UI</h4>
+</div>
+</div>
+<!-- Project 3: Squareish -->
+<div class="lg:col-span-5 group relative bg-surface-container-highest overflow-hidden lg:-mt-24">
+<img alt="Project Three" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-50 group-hover:opacity-90" data-alt="Code snippets floating in 3D space with cinematic lighting and deep shadows, representing advanced software development" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB83ChUoF6O5syJYVG8tsTsY5x5_u9itVcJfDX0emkqjWDtDu7CJ6-h9y2XA-6DvpKe0x_NWvnWigcYrNslLo_DHxkElJjRmQ3Q82m_da7h11x1erbUYNIAslXSJi7v0towWN5U3hO29wctlB8EIw586ELIdqrWyuPsQbpyRTlXbxMzbaVU8IQoXoahJcir3kJQ0LeZbPp30_7cSUEgU4rG0srEEWXYCaczH129zzlUFBcxxgirjS4znDQFJM2DTdU8jjZL8Z9Ush8"/>
+<div class="absolute bottom-12 left-12">
+<span class="font-label text-xs tracking-widest text-primary mb-2 block">EXPERIMENTAL</span>
+<h4 class="font-headline text-4xl uppercase font-bold text-white">KINETIC_CORE</h4>
+</div>
+</div>
+<!-- Project 4: Wide -->
+<div class="lg:col-span-7 group relative bg-surface-container-low border border-outline-variant/10 overflow-hidden lg:mt-12 h-[400px]">
+<div class="absolute inset-0 flex items-center justify-center p-12">
+<div class="text-center">
+<span class="material-symbols-outlined text-6xl text-primary mb-6">folder_open</span>
+<p class="font-headline text-xl uppercase tracking-widest opacity-40">VIEW ALL LABORATORY PROJECTS</p>
+</div>
+</div>
+<div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</section>
+<!-- Journey: Vertical Timeline -->
+<section class="py-48 px-12 lg:px-24 bg-surface-container-lowest">
+<div class="grid grid-cols-12">
+<div class="col-span-12 lg:col-span-2 mb-24 lg:mb-0">
+<div class="sticky top-32">
+<h2 class="font-headline text-2xl uppercase tracking-[0.4em] text-outline">PATHWAY</h2>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-10 space-y-48">
+<div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-primary"></div>
+<span class="font-label text-sm tracking-widest text-primary-fixed mb-4 block">PRESENT — 2022</span>
+<h3 class="font-headline text-5xl uppercase font-bold mb-6">Principal Architect @ NEO_TECH</h3>
+<p class="font-body text-secondary max-w-xl text-lg leading-relaxed opacity-60">Redefining high-throughput transaction systems for the next generation of financial decentralized protocols. Scaling the unscalable.</p>
+</div>
+<div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline"></div>
+<span class="font-label text-sm tracking-widest text-outline mb-4 block">2022 — 2019</span>
+<h3 class="font-headline text-5xl uppercase font-bold mb-6">Lead Dev @ STRUCT_VOID</h3>
+<p class="font-body text-secondary max-w-xl text-lg leading-relaxed opacity-60">Architecting head-less CMS solutions and edge computing frameworks for global enterprise clients. Focused on low-latency delivery.</p>
+</div>
+<div class="relative pl-12 lg:pl-24 border-l border-outline-variant/30">
+<div class="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-outline"></div>
+<span class="font-label text-sm tracking-widest text-outline mb-4 block">2019 — 2017</span>
+<h3 class="font-headline text-5xl uppercase font-bold mb-6">Backend Eng @ ORIGIN_SYST</h3>
+<p class="font-body text-secondary max-w-xl text-lg leading-relaxed opacity-60">Core contributor to legacy migration pipelines and micro-service orchestration. Learning the foundations of resilient code.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact: High Contrast -->
+<section class="py-48 px-12 lg:px-24 bg-surface-container-high relative overflow-hidden">
+<div class="grid grid-cols-12 gap-12 relative z-10">
+<div class="col-span-12 lg:col-span-6">
+<h2 class="font-headline text-[6vw] leading-none font-black text-primary uppercase mb-12">LET'S<br/>BUILD.</h2>
+<p class="font-body text-secondary text-xl max-w-sm mb-12 opacity-80">Currently accepting high-impact collaborations and technical consulting engagements.</p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="font-label tracking-widest">CONNECT@KHANIN.VOID</span>
+</div>
+<div class="flex items-center gap-4 text-secondary">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-label tracking-widest uppercase">REMOTE / ASIA / EUROPE</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 bg-surface-container-low p-12 lg:p-24 border border-outline-variant/10">
+<form class="flex flex-col gap-12">
+<div class="group relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all" id="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="name">Your Identity</label>
+</div>
+<div class="group relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all" id="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="email">Communication Port</label>
+</div>
+<div class="group relative">
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/40 py-4 focus:ring-0 focus:border-primary peer text-on-surface font-body text-lg transition-all resize-none" id="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-4 text-outline font-label uppercase tracking-widest text-sm transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-primary peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="message">Mission Brief</label>
+</div>
+<button class="bg-primary text-on-primary py-6 px-12 font-headline font-bold uppercase tracking-[0.3em] hover:bg-white transition-colors text-center w-full lg:w-max">INITIATE CONTACT</button>
+</form>
+</div>
+</div>
+<div class="absolute right-[-10%] bottom-[-10%] font-headline text-[30vw] font-black text-on-surface/5 pointer-events-none select-none">VOID</div>
+</section>
+</main>
+<!-- Footer Cluster -->
+<footer class="bg-[#0b0e14] grid grid-cols-12 gap-8 items-end w-full p-12 lg:p-24 border-t-0">
+<div class="col-span-12 lg:col-span-8">
+<div class="font-['Space_Grotesk'] text-[3.5rem] lg:text-[7rem] leading-none uppercase font-black text-[#dbfcff]">STUDIO_VOID</div>
+<p class="font-label text-outline tracking-[0.2em] mt-8">©2024 THE STRUCTURAL VOID. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="col-span-12 lg:col-span-4 flex flex-col lg:items-end gap-6">
+<div class="flex gap-12">
+<a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="#">GITHUB</a>
+<a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="#">LINKEDIN</a>
+<a class="font-headline text-sm tracking-widest text-slate-700 hover:text-[#dbfcff] transition-colors" href="#">READCV</a>
+</div>
+<div class="font-label text-[0.6875rem] text-outline-variant opacity-40 uppercase tracking-widest">Engineered with Intentionality</div>
+</div>
+</footer>
+<!-- Subtle Chat/Agent Widget -->
+<div class="fixed bottom-12 left-12 z-50">
+<button class="bg-surface-container-high/40 backdrop-blur-md border border-outline-variant/20 px-6 py-3 flex items-center gap-4 hover:bg-primary transition-all group">
+<div class="w-2 h-2 rounded-full bg-primary group-hover:bg-on-primary animate-pulse"></div>
+<span class="font-label text-[0.6875rem] font-bold tracking-widest text-on-surface group-hover:text-on-primary uppercase">AGENT_V1.0</span>
+</button>
+</div>
+</body></html>
