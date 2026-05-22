@@ -48,7 +48,7 @@
         <h3>Basic Details</h3>
         <ul>
             <li><strong>Full Name</strong>: Khanin Chomphusri</li>
-            <li><strong>Professional Title</strong> Senior Mobile Engineer (Flutter) | Senior Frontend Engineer
+            <li><strong>Professional Title</strong>: Flutter / Mobile UI Architect | Senior Frontend Engineer
                 (Angular)</li>
             <li><strong>Location</strong>: Bangkok, Thailand</li>
             <li><strong>Years of Experience</strong>: <span class="metric">14+ years</span> (including 11 years in
@@ -58,13 +58,216 @@
 
         <h3>Contact & Links</h3>
         <div class="contact-info">
-            <div class="contact-item"><strong>Phone</strong>: 089 775 1918</div>
+            <div class="contact-item"><strong>Phone</strong>: 089 775 1919</div>
             <div class="contact-item"><strong>GitHub</strong>: <a href="https://github.com/khanin-devmode"
                     target="_blank">github.com/khanin-devmode</a></div>
             <div class="contact-item"><strong>Portfolio</strong>: <a href="https://khanin.ch"
                     target="_blank">khanin.ch</a></div>
             <div class="contact-item"><strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/khanin-ch/"
                     target="_blank">linkedin.com/in/khanin-ch</a></div>
+        </div>
+
+        <h2 id="work-experience">Work Experience</h2>
+
+        <h3>Current/Most Recent Position</h3>
+        <div class="section-card">
+            <ul>
+                <li><strong>Company</strong>: Oivan Digital (Thailand) - serving MimoTech AI (Finnish company serving
+                    AIS, Thailand's leading telecommunication company)</li>
+                <li><strong>Title</strong>: Software Development Engineer (Mobile & UI Architecture)</li>
+                <li><strong>Duration</strong>: July 2023 - Present</li>
+                <li><strong>Key responsibilities</strong>:
+                    <ul>
+                        <li>Lead architectural design and implementation of enterprise design system packages</li>
+                        <li>Own development and evolution of key UI mobile modules for myAIS application</li>
+                        <li>Establish and maintain Widgetbook documentation as central source of truth</li>
+                        <li>Drive performance optimization and code refactoring initiatives</li>
+                        <li>Mentor developers and conduct rigorous code reviews</li>
+                        <li>Leverage AI-assisted workflows for rapid development and debugging</li>
+                    </ul>
+                </li>
+                <li><strong>Notable achievements</strong>:
+                    <ul>
+                        <li>Design system implemented in myAIS app serving <span class="metric">10M+ monthly
+                                users</span></li>
+                        <li>Delivered 3 major package versions empowering <span class="metric">100+ developers</span>
+                        </li>
+                        <li>Reduced widget payloads by <span class="metric">40%</span> (1,000 to 600 lines)</li>
+                        <li>Maintained <span class="metric">90%+ test coverage</span> across all packages</li>
+                        <li>Built automated QA key generation scripts</li>
+                        <li>Implemented complex 3-tier design token system in the Flutter/Dart design system UI package
+                            (Base → Primitive → Semantic), totalling <span class="metric">~4,000+ typed tokens</span>:
+                            <ul>
+                                <li><strong>Base layer</strong>: ~1,669 tokens (raw values as
+                                    <code>static const</code>)
+                                </li>
+                                <li><strong>Primitive layer</strong>: ~1,297 tokens (named getters)</li>
+                                <li><strong>Semantic layer</strong>: ~1,073 tokens (instance fields for
+                                    contextual/themeable usage)</li>
+                                <li><strong>Categories covered</strong>: Color (~1,699), Size/Sizing (~1,033), Motion
+                                    (~309), Typography/Text Style (~159), Spacing (~158), Elevation (~94), Radius
+                                    (~71), Opacity (~42), Grid (~42), plus misc (border, gradient, image ratio,
+                                    overlay, state layer, theme aggregator)</li>
+                            </ul>
+                        </li>
+                        <li>Designed responsive utilities and widgets consumed by <span class="metric">~100
+                                widgets</span> across the design system, built with <strong>zero third-party
+                                dependencies</strong> to maximize maintainability, reduce supply-chain risk, and keep
+                            the API ergonomic for downstream developers</li>
+                    </ul>
+                </li>
+                <li><strong>Client Projects</strong>:
+                    <ul>
+                        <li><strong>myAIS (via MimoTech AI)</strong>: Enterprise design system architecture for
+                            Thailand's leading telecom mobile app (Flutter/Dart). Primary engagement covering the
+                            achievements listed above.</li>
+                        <li><strong>ZATCA - Agentic AI Project Management Demo</strong>:
+                            <ul>
+                                <li><strong>Client</strong>: ZATCA (Saudi Arabia's Zakat, Tax and Customs Authority)
+                                </li>
+                                <li><strong>Description</strong>: Custom project management platform with embedded
+                                    agentic AI capabilities. Provides full project context awareness for summarization
+                                    and insights, plus prompt-driven project updates (create milestones, analyze and
+                                    flag blockers, update budgets) so users don't need to manually update project
+                                    state.</li>
+                                <li><strong>Role</strong>: Solo developer (full-stack)</li>
+                                <li><strong>Timeline</strong>: First demo delivered in <span class="metric">4
+                                        days</span> - a functional end-to-end RAG system with embeddings working over
+                                    mocked project data (not just a clickable prototype). Built using AI-agent-assisted
+                                    IDE workflow and Google Stitch for design.</li>
+                                <li><strong>Outcome</strong>: Client approved and engagement advanced to project
+                                    proposal stage</li>
+                                <li><strong>Key AI Capabilities</strong>:
+                                    <ul>
+                                        <li>RAG-based project context awareness across project documents</li>
+                                        <li>Prompt-driven project mutations (milestones, blockers, budgets)</li>
+                                        <li>Automatic project summarization and insight generation</li>
+                                        <li>Swappable LLM backend via abstraction layer (BaseLLMService →
+                                            Gemini/Ollama)</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Frontend Stack</strong>:
+                                    <ul>
+                                        <li>Angular 21 (standalone components) with TypeScript 5.9</li>
+                                        <li>Angular Material 21 + Angular CDK</li>
+                                        <li>TailwindCSS 3.4</li>
+                                        <li>RxJS 7.8, Zone.js 0.16</li>
+                                        <li>Build/Test: @angular/build, Vitest 4 (with jsdom), Prettier</li>
+                                        <li>Planned: Chart.js + ng2-charts, Lucide Angular, Angular Signals for state
+                                            management</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Backend Stack</strong>:
+                                    <ul>
+                                        <li>FastAPI 0.115 on Uvicorn, Python 3.11+</li>
+                                        <li>SQLAlchemy 2.0, Alembic, PostgreSQL 15 (psycopg2-binary)</li>
+                                        <li>Pydantic 2.10 + pydantic-settings for validation</li>
+                                        <li>Auth/Security: python-jose (JWT), passlib[bcrypt], python-dotenv</li>
+                                        <li>Async/Jobs: Celery 5.4 + Redis 5.2</li>
+                                        <li>HTTP client: httpx</li>
+                                    </ul>
+                                </li>
+                                <li><strong>AI / RAG Stack</strong>:
+                                    <ul>
+                                        <li>LLM: Google Gemini (google-generativeai) for demo; Ollama/vLLM planned for
+                                            production</li>
+                                        <li>Orchestration: LangChain 0.3</li>
+                                        <li>Vector store: ChromaDB 0.4</li>
+                                        <li>Embeddings: sentence-transformers 3.3 (plus Gemini embedding API)</li>
+                                        <li>Document processing: PyPDF2, pdf2image, Pillow</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Architecture & Infrastructure</strong>:
+                                    <ul>
+                                        <li>Service layer with LLM abstraction (BaseLLMService → Gemini/Ollama),
+                                            swappable via <code>LLM_PROVIDER</code> env var</li>
+                                        <li>Deployment: Docker + docker-compose (postgres, chromadb, redis, ollama,
+                                            backend, frontend, nginx)</li>
+                                        <li>Authentication: JWT + RBAC with roles (GM, PM, PO)</li>
+                                        <li>Backend tooling: pytest, black, flake8, mypy</li>
+                                        <li>Frontend tooling: Vitest, Prettier</li>
+                                        <li>Version control: Git with Conventional Commits</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Design Tool</strong>: Google Stitch (AI-assisted UI design)</li>
+                                <li><strong>Development Approach</strong>: AI-agent-assisted IDE workflow enabling
+                                    rapid 4-day MVP delivery</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3>Previous Position(s)</h3>
+
+        <div class="section-card">
+            <h4>Position 2:</h4>
+            <ul>
+                <li><strong>Company</strong>: Sathien Plastic & Fiber Group (Automotive parts manufacturer)</li>
+                <li><strong>Title</strong>: Research and Development Manager</li>
+                <li><strong>Duration</strong>: August 2012 - June 2023 (11 years)</li>
+                <li><strong>Key responsibilities</strong>:
+                    <ul>
+                        <li>Direct end-to-end prototyping and new product launches</li>
+                        <li>Analyze cost structures and optimize pricing for high margins</li>
+                        <li>Lead multi-functional engineering efforts for production workflows</li>
+                        <li>Solve complex quality bottlenecks</li>
+                    </ul>
+                </li>
+                <li><strong>Notable achievements</strong>:
+                    <ul>
+                        <li>Applied lean design processes to transition concepts into scalable production tooling</li>
+                        <li>Demonstrated strong commercial acumen in cost optimization</li>
+                        <li>Successfully launched multiple automotive parts products</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h4>Position 3:</h4>
+            <ul>
+                <li><strong>Company</strong>: Tech Lead Innovation - serving Krungthai Bank (Freelance)</li>
+                <li><strong>Title</strong>: Angular - Frontend Developer / Angular & TypeScript Developer</li>
+                <li><strong>Duration</strong>: March 2017 - February 2018 (6 months, during R&D Manager role)</li>
+                <li><strong>Key responsibilities</strong>:
+                    <ul>
+                        <li>Architect and develop enterprise banking applications</li>
+                        <li>Implement secure user flows for financial transactions</li>
+                        <li>Design robust API integrations</li>
+                    </ul>
+                </li>
+                <li><strong>Notable achievements</strong>:
+                    <ul>
+                        <li>Built mobile-first banking application with TypeScript and Angular/Ionic</li>
+                        <li>Implemented critical fund redemption and subscription features</li>
+                        <li>Adhered to strict financial transaction security standards</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card">
+            <h4>Position 4:</h4>
+            <ul>
+                <li><strong>Company</strong>: Toyota Motor Thailand</li>
+                <li><strong>Title</strong>: Mechanical Engineer</li>
+                <li><strong>Duration</strong>: July 2010 - July 2012 (2 years)</li>
+                <li><strong>Key responsibilities</strong>:
+                    <ul>
+                        <li>Execute prototype wire harness modifications</li>
+                        <li>Conduct extensive field testing for new vehicle models</li>
+                        <li>Apply lean methodologies (PDCA/Kaizen) for continuous improvement</li>
+                    </ul>
+                </li>
+                <li><strong>Notable achievements</strong>:
+                    <ul>
+                        <li>Successfully iterated and improved technical designs for production</li>
+                        <li>Gained deep understanding of lean manufacturing principles</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
 
         <h4>Active Personal Projects</h4>
@@ -331,191 +534,6 @@
             <li><strong>Delegation</strong>: Coming from hands-on engineering background, sometimes dive too deep into
                 implementation rather than delegating. Learning to trust team members more.</li>
         </ul>
-
-        <hr>
-
-        <h2 id="work-experience">Work Experience</h2>
-
-        <h3>Current/Most Recent Position</h3>
-        <div class="section-card">
-            <ul>
-                <li><strong>Company</strong>: Oivan Digital (Thailand) - serving MimoTech AI (Finnish company serving
-                    AIS, Thailand's leading telecommunication company)</li>
-                <li><strong>Title</strong>: Software Development Engineer (Mobile & UI Architecture)</li>
-                <li><strong>Duration</strong>: July 2023 - Present (1.5+ years)</li>
-                <li><strong>Key responsibilities</strong>:
-                    <ul>
-                        <li>Lead architectural design and implementation of enterprise design system packages</li>
-                        <li>Own development and evolution of key UI mobile modules for myAIS application</li>
-                        <li>Establish and maintain Widgetbook documentation as central source of truth</li>
-                        <li>Drive performance optimization and code refactoring initiatives</li>
-                        <li>Mentor developers and conduct rigorous code reviews</li>
-                        <li>Leverage AI-assisted workflows for rapid development and debugging</li>
-                    </ul>
-                </li>
-                <li><strong>Notable achievements</strong>:
-                    <ul>
-                        <li>Serving <span class="metric">10M+ active users</span> with operational excellence</li>
-                        <li>Delivered 3 major package versions empowering <span class="metric">100+ developers</span>
-                        </li>
-                        <li>Reduced widget payloads by <span class="metric">40%</span> (1,000 to 600 lines)</li>
-                        <li>Maintained <span class="metric">90%+ test coverage</span> across all packages</li>
-                        <li>Built automated QA key generation scripts</li>
-                    </ul>
-                </li>
-                <li><strong>Client Projects</strong>:
-                    <ul>
-                        <li><strong>myAIS (via MimoTech AI)</strong>: Enterprise design system architecture for
-                            Thailand's leading telecom mobile app (Flutter/Dart). Primary engagement covering the
-                            achievements listed above.</li>
-                        <li><strong>ZATCA - Agentic AI Project Management Demo</strong>:
-                            <ul>
-                                <li><strong>Client</strong>: ZATCA (Saudi Arabia's Zakat, Tax and Customs Authority)
-                                </li>
-                                <li><strong>Description</strong>: Custom project management platform with embedded
-                                    agentic AI capabilities. Provides full project context awareness for summarization
-                                    and insights, plus prompt-driven project updates (create milestones, analyze and
-                                    flag blockers, update budgets) so users don't need to manually update project
-                                    state.</li>
-                                <li><strong>Role</strong>: Solo developer (full-stack)</li>
-                                <li><strong>Timeline</strong>: First demo delivered in <span class="metric">4
-                                        days</span> - a functional end-to-end RAG system with embeddings working over
-                                    mocked project data (not just a clickable prototype). Built using AI-agent-assisted
-                                    IDE workflow and Google Stitch for design.</li>
-                                <li><strong>Outcome</strong>: Client approved and engagement advanced to project
-                                    proposal stage</li>
-                                <li><strong>Key AI Capabilities</strong>:
-                                    <ul>
-                                        <li>RAG-based project context awareness across project documents</li>
-                                        <li>Prompt-driven project mutations (milestones, blockers, budgets)</li>
-                                        <li>Automatic project summarization and insight generation</li>
-                                        <li>Swappable LLM backend via abstraction layer (BaseLLMService →
-                                            Gemini/Ollama)</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Frontend Stack</strong>:
-                                    <ul>
-                                        <li>Angular 21 (standalone components) with TypeScript 5.9</li>
-                                        <li>Angular Material 21 + Angular CDK</li>
-                                        <li>TailwindCSS 3.4</li>
-                                        <li>RxJS 7.8, Zone.js 0.16</li>
-                                        <li>Build/Test: @angular/build, Vitest 4 (with jsdom), Prettier</li>
-                                        <li>Planned: Chart.js + ng2-charts, Lucide Angular, Angular Signals for state
-                                            management</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Backend Stack</strong>:
-                                    <ul>
-                                        <li>FastAPI 0.115 on Uvicorn, Python 3.11+</li>
-                                        <li>SQLAlchemy 2.0, Alembic, PostgreSQL 15 (psycopg2-binary)</li>
-                                        <li>Pydantic 2.10 + pydantic-settings for validation</li>
-                                        <li>Auth/Security: python-jose (JWT), passlib[bcrypt], python-dotenv</li>
-                                        <li>Async/Jobs: Celery 5.4 + Redis 5.2</li>
-                                        <li>HTTP client: httpx</li>
-                                    </ul>
-                                </li>
-                                <li><strong>AI / RAG Stack</strong>:
-                                    <ul>
-                                        <li>LLM: Google Gemini (google-generativeai) for demo; Ollama/vLLM planned for
-                                            production</li>
-                                        <li>Orchestration: LangChain 0.3</li>
-                                        <li>Vector store: ChromaDB 0.4</li>
-                                        <li>Embeddings: sentence-transformers 3.3 (plus Gemini embedding API)</li>
-                                        <li>Document processing: PyPDF2, pdf2image, Pillow</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Architecture & Infrastructure</strong>:
-                                    <ul>
-                                        <li>Service layer with LLM abstraction (BaseLLMService → Gemini/Ollama),
-                                            swappable via <code>LLM_PROVIDER</code> env var</li>
-                                        <li>Deployment: Docker + docker-compose (postgres, chromadb, redis, ollama,
-                                            backend, frontend, nginx)</li>
-                                        <li>Authentication: JWT + RBAC with roles (GM, PM, PO)</li>
-                                        <li>Backend tooling: pytest, black, flake8, mypy</li>
-                                        <li>Frontend tooling: Vitest, Prettier</li>
-                                        <li>Version control: Git with Conventional Commits</li>
-                                    </ul>
-                                </li>
-                                <li><strong>Design Tool</strong>: Google Stitch (AI-assisted UI design)</li>
-                                <li><strong>Development Approach</strong>: AI-agent-assisted IDE workflow enabling
-                                    rapid 4-day MVP delivery</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <h3>Previous Position(s)</h3>
-
-        <div class="section-card">
-            <h4>Position 2:</h4>
-            <ul>
-                <li><strong>Company</strong>: Sathien Plastic & Fiber Group (Automotive parts manufacturer)</li>
-                <li><strong>Title</strong>: Research and Development Manager</li>
-                <li><strong>Duration</strong>: August 2012 - June 2023 (11 years)</li>
-                <li><strong>Key responsibilities</strong>:
-                    <ul>
-                        <li>Direct end-to-end prototyping and new product launches</li>
-                        <li>Analyze cost structures and optimize pricing for high margins</li>
-                        <li>Lead multi-functional engineering efforts for production workflows</li>
-                        <li>Solve complex quality bottlenecks</li>
-                    </ul>
-                </li>
-                <li><strong>Notable achievements</strong>:
-                    <ul>
-                        <li>Applied lean design processes to transition concepts into scalable production tooling</li>
-                        <li>Demonstrated strong commercial acumen in cost optimization</li>
-                        <li>Successfully launched multiple automotive parts products</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h4>Position 3:</h4>
-            <ul>
-                <li><strong>Company</strong>: Tech Lead Innovation - serving Krungthai Bank (Freelance)</li>
-                <li><strong>Title</strong>: Angular - Frontend Developer / Angular & TypeScript Developer</li>
-                <li><strong>Duration</strong>: March 2017 - February 2018 (6 months, during R&D Manager role)</li>
-                <li><strong>Key responsibilities</strong>:
-                    <ul>
-                        <li>Architect and develop enterprise banking applications</li>
-                        <li>Implement secure user flows for financial transactions</li>
-                        <li>Design robust API integrations</li>
-                    </ul>
-                </li>
-                <li><strong>Notable achievements</strong>:
-                    <ul>
-                        <li>Built mobile-first banking application with TypeScript and Angular/Ionic</li>
-                        <li>Implemented critical fund redemption and subscription features</li>
-                        <li>Adhered to strict financial transaction security standards</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-
-        <div class="section-card">
-            <h4>Position 4:</h4>
-            <ul>
-                <li><strong>Company</strong>: Toyota Motor Thailand</li>
-                <li><strong>Title</strong>: Mechanical Engineer</li>
-                <li><strong>Duration</strong>: July 2010 - July 2012 (2 years)</li>
-                <li><strong>Key responsibilities</strong>:
-                    <ul>
-                        <li>Execute prototype wire harness modifications</li>
-                        <li>Conduct extensive field testing for new vehicle models</li>
-                        <li>Apply lean methodologies (PDCA/Kaizen) for continuous improvement</li>
-                    </ul>
-                </li>
-                <li><strong>Notable achievements</strong>:
-                    <ul>
-                        <li>Successfully iterated and improved technical designs for production</li>
-                        <li>Gained deep understanding of lean manufacturing principles</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
 
         <hr>
 
