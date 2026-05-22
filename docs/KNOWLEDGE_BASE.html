@@ -407,6 +407,83 @@
         </div>
 
         <div class="section-card">
+            <strong>Convert Rai</strong>
+            <ul>
+                <li><strong>Description</strong>: iOS / Android utility app that converts Thai land-measurement units
+                    (ไร่ / rai, งาน / ngan, ตารางวา / square wah) to and from metric units (square meters, hectares,
+                    etc.) in real time. Built to solve a personal pain point: rai-to-metric conversion is awkward,
+                    Thai-specific, and was <strong>not supported by Google's calculator</strong> at the time of
+                    building.</li>
+                <li><strong>Status</strong>: <strong>Published commercial app</strong> — slow but ongoing organic
+                    sales, still live in the stores</li>
+                <li><strong>Store links</strong>:
+                    <ul>
+                        <li><a href="https://apps.apple.com/us/app/convert-rai/id6444877065" target="_blank">iOS App
+                                Store</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=dev.khanin.convert_rai"
+                                target="_blank">Google Play Store</a></li>
+                    </ul>
+                </li>
+                <li><strong>Significance</strong>: <strong>First commercially published Flutter app</strong> — bridged
+                    the learning phase (Coolor Clone) and the professional Flutter work at Oivan / MimoTech AI on the
+                    myAIS design system. Demonstrates product / business thinking beyond code (problem identification,
+                    monetization, user-facing publishing).</li>
+                <li><strong>Features</strong>:
+                    <ul>
+                        <li><strong>Live multi-unit conversion</strong>: every input updates every other unit in
+                            real-time — no "convert" button, no round-trip; designed for the speed needed in
+                            real-estate or land-survey conversations</li>
+                        <li><strong>Thai ↔ metric simultaneous conversion</strong>: rai / ngan / square wah ↔ all
+                            metric units shown together so the user never has to chain conversions</li>
+                        <li><strong>Price converter</strong>: bidirectional total-land-price calculator (price per
+                            unit ↔ total price) — practical for land buyers / sellers</li>
+                        <li><strong>Save and copy</strong>: persist conversion records locally and copy formatted
+                            conversion text for sharing in messaging apps</li>
+                        <li><strong>Polished visual design</strong>: <strong>commissioned a professional
+                                designer</strong>
+                            for the UI before the AI-design era — invested in real design quality rather than
+                            ship-with-default-Material-look</li>
+                    </ul>
+                </li>
+                <li><strong>Tech stack</strong>:
+                    <ul>
+                        <li><strong>Framework</strong>: Flutter / Dart (single codebase, iOS + Android)</li>
+                        <li><strong>State management</strong>: <strong>Riverpod</strong> — first serious adoption of
+                            Riverpod, foundation that later supported state management work in the myAIS Flutter
+                            packages</li>
+                        <li><strong>Local storage</strong>: <strong>Hive</strong> — second project applying Hive
+                            (after Coolor Clone), reinforcing local-first patterns</li>
+                        <li><strong>Distribution</strong>: iOS App Store + Google Play Store (full publish pipeline:
+                            signing, store listings, screenshots, app review)</li>
+                    </ul>
+                </li>
+                <li><strong>Key learnings</strong>:
+                    <ul>
+                        <li><strong>End-to-end mobile publishing</strong>: First experience of the full path from code
+                            → signed builds → store listing → app review → live distribution. The publishing pipeline
+                            is a non-trivial skill many Flutter developers never exercise.</li>
+                        <li><strong>Product thinking</strong>: Identified a real, niche, underserved problem (Thai rai
+                            conversion) rather than building a generic utility — early lesson in "build for a specific
+                            user, not for everyone"</li>
+                        <li><strong>Cross-functional collaboration with a designer</strong>: Working with a hired
+                            designer required translating UI specs into Flutter widgets, negotiating constraints, and
+                            owning the design-to-code boundary — directly applicable to current work with Product /
+                            Design teams in the myAIS engagement</li>
+                        <li><strong>Riverpod state management</strong>: Reactive, type-safe state patterns that scale
+                            beyond simple <code>setState</code> — preparation for the more demanding state work in the
+                            design system</li>
+                        <li><strong>Real-time bidirectional UI logic</strong>: "Every input updates every output"
+                            requires careful state design to avoid feedback loops — early exposure to the kind of UI
+                            architecture concerns that show up at scale</li>
+                        <li><strong>Long-tail product ownership</strong>: An app that "sells slowly but still live"
+                            teaches that real products require ongoing maintenance, store-policy compliance, and OS /
+                            Flutter version migrations over time</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-card">
             <strong>khanin.ch</strong>
             <ul>
                 <li><strong>Description</strong>: Personal portfolio site with AI-powered HR chatbot</li>
@@ -417,43 +494,219 @@
         <h4>Past Projects & Technical Experiments</h4>
 
         <div class="section-card">
-            <strong>realmsup.com</strong>
+            <strong>realmsup.com</strong> - <a href="https://github.com/Khanin-devmode/realmsup-angular"
+                target="_blank">GitHub Repo (frontend)</a>
             <ul>
-                <li><strong>Description</strong>: Game server monitoring system</li>
-                <li><strong>Status</strong>: Archived proof-of-concept</li>
-                <li><strong>Architecture</strong>: Serverless</li>
-                <li><strong>Frontend</strong>: Angular with SSR</li>
-                <li><strong>Backend</strong>: Firebase Cloud Functions for API polling</li>
-                <li><strong>Database</strong>: Firestore real-time database</li>
-                <li><strong>Notifications</strong>: Firebase Cloud Messaging (FCM) push notifications</li>
+                <li><strong>Description</strong>: Real-time monitoring service for <strong>World of Warcraft realm
+                        (server) status</strong>. Polled Blizzard's WoW API for realm online / offline / queue status,
+                    pushed live updates to a web dashboard, and sent push notifications to subscribed users when their
+                    realm came back online after maintenance or outages.</li>
+                <li><strong>Status</strong>: <strong>Archived</strong> — service was retired after Blizzard
+                    deprecated / stopped maintaining the WoW realm-status API the system depended on. Source code for
+                    the Angular frontend is publicly available on GitHub.</li>
+                <li><strong>Significance</strong>: First end-to-end <strong>full-stack serverless project</strong>
+                    combining Angular SSR, Firebase Cloud Functions, real-time Firestore, and push notifications —
+                    the architectural template later refined and re-applied in audioarenalab.com.</li>
+                <li><strong>Outcome</strong>: <strong>Reached real users</strong> — a small group of WoW players
+                    subscribed to push notifications and used the dashboard to know when their realm was back online.
+                    Validated the full pipeline (API polling → status change detection → push delivery) end-to-end in
+                    production.</li>
+                <li><strong>Tech stack</strong>:
+                    <ul>
+                        <li><strong>Frontend</strong>: Angular with Server-Side Rendering (SSR)</li>
+                        <li><strong>Backend</strong>: Firebase Cloud Functions (scheduled API polling, status-change
+                            detection, push dispatch)</li>
+                        <li><strong>Database</strong>: Firestore (real-time sync to clients, single source of truth for
+                            realm state)</li>
+                        <li><strong>Notifications</strong>: Firebase Cloud Messaging (FCM) for push notifications to
+                            web and mobile</li>
+                        <li><strong>External API</strong>: Blizzard / World of Warcraft realm-status API</li>
+                        <li><strong>Hosting</strong>: Firebase Hosting</li>
+                    </ul>
+                </li>
+                <li><strong>Notable technical work</strong>:
+                    <ul>
+                        <li><strong>Real-time push pipeline</strong>: Designed the full path from scheduled Cloud
+                            Function polling Blizzard's API → diff against last-known state in Firestore → trigger FCM
+                            push only on actual state transitions (avoiding duplicate / noisy notifications)</li>
+                        <li><strong>Serverless architecture</strong>: All backend logic ran on Cloud Functions with
+                            Firestore as the event source — no servers to manage, automatic scaling, and pay-per-use
+                            cost model</li>
+                        <li><strong>SSR + real-time client</strong>: Combined Angular SSR (initial server-rendered
+                            payload for fast first paint and SEO) with Firestore's real-time client subscriptions
+                            (live updates after hydration) — a non-trivial pattern that required careful handling of
+                            the SSR-to-client handoff</li>
+                    </ul>
+                </li>
+                <li><strong>Key learnings</strong>:
+                    <ul>
+                        <li><strong>End-to-end serverless full-stack</strong>: First project shipping a complete
+                            backend + frontend + notifications pipeline using only managed services — established the
+                            serverless template later reused in audioarenalab.com</li>
+                        <li><strong>SSR with hydration</strong>: Hands-on experience with the trade-offs and edge cases
+                            of Angular Universal — directly applicable to the Angular SSR work in
+                            audioarenalab.com</li>
+                        <li><strong>Real-time data architecture</strong>: Firestore as a real-time event source
+                            simplifies what would otherwise need WebSockets / message queues — useful pattern
+                            recognition for choosing between push and pull architectures</li>
+                        <li><strong>Push notification UX discipline</strong>: Learning to send notifications only on
+                            <em>meaningful</em> state changes — over-notifying is the fastest way to lose subscribers
+                        </li>
+                        <li><strong>Third-party API dependency risk</strong>: The project's eventual archive (Blizzard
+                            stopping the realm-status API) was a real-world lesson in <strong>API dependency
+                                risk</strong>
+                            — a concern that now informs decisions about which third-party APIs to build hard
+                            dependencies on in production work</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div class="section-card">
             <strong>freqtrade</strong>
             <ul>
-                <li><strong>Description</strong>: Local deployment of open-source crypto trading bots</li>
-                <li><strong>Status</strong>: Technical experiment</li>
+                <li><strong>Description</strong>: Self-hosted deployment of <a href="https://www.freqtrade.io/"
+                        target="_blank">freqtrade</a>, an open-source Python crypto trading bot framework. Used to
+                    explore algorithmic trading, self-hosted infrastructure, and bot integrations.</li>
+                <li><strong>Status</strong>: Technical experiment / learning project (not production-grade, not running
+                    real capital at scale)</li>
+                <li><strong>What was built</strong>:
+                    <ul>
+                        <li>Local server deployment of the freqtrade bot</li>
+                        <li>Custom trading strategies implemented in Python (entry/exit logic, indicators)</li>
+                        <li>Telegram bot integration for remote monitoring and control of the trading bot</li>
+                        <li>Backtesting workflow against historical market data</li>
+                    </ul>
+                </li>
+                <li><strong>Key learnings</strong>:
+                    <ul>
+                        <li><strong>Python</strong>: First substantial hands-on Python project — strategy logic, data
+                            handling, working with the freqtrade framework's API. Foundation that later supported
+                            backend work on the ZATCA demo (FastAPI / LangChain / ChromaDB).</li>
+                        <li><strong>Self-hosted server administration</strong>: Deploying and operating a long-running
+                            service on a local server (process management, restart handling, log monitoring)</li>
+                        <li><strong>Bot integrations</strong>: Configuring and using the Telegram Bot API for
+                            programmatic notifications and remote control</li>
+                        <li><strong>Algorithmic / quantitative thinking</strong>: Translating trading hypotheses into
+                            testable rules, then validating against historical data — a discipline structurally
+                            similar to test-driven development</li>
+                        <li><strong>Configuration over code</strong>: Working with freqtrade's heavy use of config
+                            files / strategy classes reinforced separation of behavior from configuration</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div class="section-card">
-            <strong>Convert Rai</strong>
+            <strong>Coolor Clone</strong> - <a href="https://github.com/Khanin-devmode/coolors_inspired_flutter"
+                target="_blank">GitHub Repo</a>
             <ul>
-                <li><strong>Description</strong>: iOS/Android utility app for real-time area unit conversions (Thai
-                    "rai" land measurement units) with local storage</li>
-                <li><strong>Status</strong>: Published mobile app</li>
-                <li><strong>Platform</strong>: iOS and Android</li>
-                <li><strong>Details</strong>: TODO - add tech stack and store links</li>
+                <li><strong>Description</strong>: Hands-on Flutter rebuild of <a href="https://coolors.co/"
+                        target="_blank">Coolors</a>, a popular color-palette generator for designers. Built as a
+                    learning project to explore Flutter end-to-end while replicating an app I personally use and
+                    enjoy.</li>
+                <li><strong>Status</strong>: Early Flutter learning project; source code publicly available on
+                    GitHub</li>
+                <li><strong>Significance</strong>: Foundational Flutter project — the hands-on exercise that built
+                    practical Flutter fluency before the professional Flutter work at Oivan / MimoTech AI (myAIS
+                    design system) where the Flutter / Mobile UI Architect role sits today.</li>
+                <li><strong>Features implemented</strong>:
+                    <ul>
+                        <li><strong>Color palette generation</strong> using a third-party Flutter package</li>
+                        <li><strong>Shake-to-generate</strong>: device accelerometer integration to trigger a new
+                            palette on shake gesture</li>
+                        <li><strong>Local persistence with Hive</strong>: saved palettes stored in an on-device NoSQL
+                            store for offline access</li>
+                        <li><strong>Drag-to-reorder</strong>: drag colors within the palette to change priority /
+                            ordering</li>
+                        <li><strong>Lock individual colors</strong>: pin specific colors in the palette so regeneration
+                            only changes the unlocked slots</li>
+                        <li><strong>Cloud-synced palette library</strong>: copy pre-defined palettes from Firebase
+                            Firestore into the user's local collection</li>
+                    </ul>
+                </li>
+                <li><strong>Tech stack</strong>:
+                    <ul>
+                        <li><strong>Framework</strong>: Flutter / Dart</li>
+                        <li><strong>Local storage</strong>: Hive (NoSQL key-value)</li>
+                        <li><strong>Cloud database</strong>: Firebase Firestore (curated palettes)</li>
+                        <li><strong>Device APIs</strong>: Accelerometer / sensor plugin (shake detection)</li>
+                        <li><strong>UI patterns</strong>: Drag-and-drop reordering, gesture handling</li>
+                    </ul>
+                </li>
+                <li><strong>Key learnings</strong>:
+                    <ul>
+                        <li><strong>Flutter fundamentals end-to-end</strong>: widget composition, state management,
+                            navigation, lifecycle — gained through shipping a real (if small) feature-complete app
+                        </li>
+                        <li><strong>Local-first architecture</strong>: Working with Hive established intuition for
+                            offline-capable apps and local-vs-remote data trade-offs</li>
+                        <li><strong>Hybrid local + cloud data</strong>: Combining Firestore (read-only curated content)
+                            with Hive (user-owned local data) — a pattern directly applicable to mobile apps that
+                            balance personalization with shared content</li>
+                        <li><strong>Native device integration</strong>: Accelerometer / sensor plugins gave early
+                            exposure to platform channels and the Flutter plugin ecosystem</li>
+                        <li><strong>Gesture and interaction design</strong>: Drag-to-reorder and lock interactions
+                            required careful state management — early practice for the more complex interaction work
+                            in the myAIS design system</li>
+                        <li><strong>Cloning as a learning method</strong>: Re-implementing an app you actually use
+                            forces real product thinking (which features matter? where are the rough edges?) — a habit
+                            carried forward into audioarenalab.com (real audio gear, real comparison workflow)</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
         <div class="section-card">
-            <strong>Fontpalette</strong>
+            <strong>Fontpalette</strong> - <a href="https://github.com/Khanin-devmode/fontpalette-angular-app"
+                target="_blank">GitHub Repo</a>
             <ul>
-                <li><strong>Description</strong>: TODO - add description</li>
-                <li><strong>Status</strong>: TODO</li>
-                <li><strong>Details</strong>: TODO - add tech stack, purpose, and learnings</li>
+                <li><strong>Description</strong>: Web app helping designers select Google Fonts faster by previewing
+                    each font against <strong>custom foreground and background color palettes</strong> — letting
+                    designers see at a glance which fonts match their intended theme, instead of evaluating fonts on
+                    the default white-on-black preview that most font websites show.</li>
+                <li><strong>Status</strong>: First deployed Angular project; deployment retired but source code
+                    publicly available on GitHub for reference</li>
+                <li><strong>Significance</strong>: <strong>First Angular project taken from concept to
+                        deployment</strong>
+                    — the foundational project that started the Angular learning trajectory leading to the Krungthai
+                    Bank freelance, audioarenalab.com, and the ZATCA frontend work.</li>
+                <li><strong>Tech stack</strong>:
+                    <ul>
+                        <li><strong>Frontend framework</strong>: Angular</li>
+                        <li><strong>State management</strong>: RxJS observables (reactive streams for font list, color
+                            selection, and preview state)</li>
+                        <li><strong>External API</strong>: Google Fonts API (fetch available fonts and metadata)</li>
+                    </ul>
+                </li>
+                <li><strong>Notable technical work</strong>:
+                    <ul>
+                        <li><strong>Performance-optimized scrolling</strong>: Each font is rendered in its own preview
+                            card; implemented viewport-based lazy rendering so font cards are only constructed when
+                            visible on screen. This kept the page responsive even when scrolling through the full
+                            Google Fonts catalog (hundreds of fonts).</li>
+                        <li><strong>Real-time color preview</strong>: User-selected foreground and background colors
+                            propagate live to all visible font cards, allowing rapid visual comparison.</li>
+                    </ul>
+                </li>
+                <li><strong>Key learnings</strong>:
+                    <ul>
+                        <li><strong>RxJS / reactive programming</strong>: First serious encounter with observable
+                            streams, operators, and the reactive paradigm — a steep learning curve at the time, but
+                            the foundation that made later Angular work (KTB, audioarenalab.com) feasible</li>
+                        <li><strong>Angular fundamentals</strong>: Component architecture, dependency injection,
+                            services, change detection — gained through end-to-end ownership of a real deployed app
+                        </li>
+                        <li><strong>Frontend performance</strong>: First exposure to viewport-based rendering
+                            optimization — the same mindset later applied to widget payload reduction (40%) in the
+                            myAIS design system</li>
+                        <li><strong>Working with third-party APIs</strong>: Authentication, rate limiting, response
+                            shaping (Google Fonts API)</li>
+                        <li><strong>Designing for a specific user need</strong>: Built to solve a real designer
+                            pain-point rather than as a tutorial-following exercise — early lesson in
+                            problem-driven development</li>
+                    </ul>
+                </li>
             </ul>
         </div>
 
