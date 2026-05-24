@@ -17,8 +17,11 @@ This repository stores raw, comprehensive career data (work experience, projects
 
 ```
 docs/
-  KNOWLEDGE_BASE.html   # Single source of truth — comprehensive career data
-  KNOWLEDGE_BASE.css    # Stylesheet for the knowledge base HTML
+  KNOWLEDGE_BASE.html          # Single source of truth — comprehensive career data
+  KNOWLEDGE_BASE.css           # Stylesheet for the knowledge base HTML
+resume_builder/
+  RESUME_BUILDER_PROMPT.md     # Prompt for generating tailored, ATS-optimized resumes
+  references/                  # Reference resume samples
 ```
 
 ## Design Principles
