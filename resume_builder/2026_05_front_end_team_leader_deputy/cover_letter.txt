@@ -1,0 +1,15 @@
+Dear Hiring Manager,
+
+I am writing to express my strong interest in the Front End Team Leader Deputy position at EveryMatrix in Chiang Mai. With over 14 years of professional experience—spanning 11 years as an R&D Manager leading cross-functional engineering teams and the last 3+ years as a Senior Mobile and Frontend Engineer—I offer a unique blend of deep people leadership and modern frontend technical credibility.
+
+In my current role at Oivan Digital, I serve as a Tech Lead and UI Consultant for AIS, Thailand’s leading telecommunications company. I lead the architectural design of enterprise design systems for the myAIS app (serving 10M+ monthly users), where I mentor developers, establish Definition of Done compliance through rigorous documentation, and drive code reviews. This hands-on technical involvement ensures I can confidently follow engineering discussions, understand the team’s work, and act as a reliable first-level escalation point for operational questions.
+
+Before transitioning fully into software engineering, I spent 11 years managing an 8-person R&D team at Sathien Plastic & Fiber Group. In that role, I owned the people rhythm—conducting regular 1:1s, managing performance cycles, and identifying growth opportunities. Drawing on my foundational Lean and continuous improvement (PDCA/Kaizen) training from my early career at Toyota, I was fully responsible for day-to-day task allocation and coordinating fast-switching Kanban delivery cycles. I excel at compiling structured reports with actionable remediation plans for leadership, and I thrive in environments where I can systematically remove blockers, monitor team morale, and ensure developers remain focused on critical technical priorities without distraction.
+
+I am highly organized, dependable, and driven by a desire to build well-structured environments where engineering teams can operate efficiently and with clear direction. The opportunity to partner with the Thailand Team Leader to optimize the operational layer of the Chiang Mai hub aligns perfectly with my background in both team coordination and frontend architecture.
+
+Thank you for your time and consideration. I would welcome the opportunity to discuss how my leadership mindset and technical background can support the UxMatrix team.
+
+Sincerely,
+
+Khanin Chomphusri
